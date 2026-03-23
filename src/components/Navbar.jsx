@@ -8,16 +8,31 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      <h2>MyStore</h2>
+      {/* Logo / Title */}
 
-      <div>
+      <h2 className="logo">
+        <Link to="/">
+          MyStore
+        </Link>
+      </h2>
 
-        <Link to="/">Home</Link>
+      {/* Navigation Links */}
 
-        <Link to="/products">Products</Link>
+      <div className="nav-links">
+
+        <Link to="/">
+          Home
+        </Link>
+
+        <Link to="/products">
+          Products
+        </Link>
 
         <Link to="/cart">
-          Cart ({cart.length})
+          Cart
+          <span className="cart-count">
+            ({cart.length})
+          </span>
         </Link>
 
       </div>
